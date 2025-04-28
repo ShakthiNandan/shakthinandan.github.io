@@ -3,285 +3,204 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>My Comprehensive Portfolio</title>
+  <title>Hosted Sites</title>
+  
+  <!-- Swiper.js CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  
   <style>
-    /* Reset and Base Styles */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f4f4f4;
-      color: #333;
-      line-height: 1.6;
-    }
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-    ul {
-      list-style: none;
+      font-family: 'Poppins', sans-serif;
     }
 
-    /* Navigation */
-    nav {
-      background: #2575fc;
-      color: #fff;
-      padding: 1rem;
-      position: fixed;
+    body, html {
+      height: 100%;
       width: 100%;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
-    nav .container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-    nav ul {
-      display: flex;
-    }
-    nav li {
-      margin-left: 1.5rem;
-    }
-    nav a:hover {
-      color: #d0d0d0;
-    }
-
-    /* Header Section */
-    header {
-      background: linear-gradient(135deg, #6a11cb, #2575fc);
-      color: #fff;
-      padding: 8rem 1rem 4rem;
-      text-align: center;
-      position: relative;
+      background: #111;
+      color: white;
       overflow: hidden;
     }
-    header h1 {
-      font-size: 3rem;
-      margin-bottom: 0.5rem;
-      animation: fadeInDown 1s ease-out;
-    }
-    header p {
-      font-size: 1.5rem;
-      animation: fadeInUp 1s ease-out;
+
+    .swiper {
+      width: 100%;
+      height: 100vh;
     }
 
-    /* Section Styles */
-    section {
-      padding: 4rem 1rem;
-      max-width: 1100px;
-      margin: 4rem auto;
-      background: #fff;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeIn 1s forwards;
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
-    section:nth-of-type(odd) {
-      background: #f9f9f9;
-    }
-    section h2 {
+
+    .card {
+      background: linear-gradient(135deg, #1e1e1e, #2c2c2c);
+      border-radius: 20px;
+      padding: 40px;
       text-align: center;
-      margin-bottom: 1.5rem;
-      color: #2575fc;
-      font-size: 2rem;
-    }
-    .content {
-      padding: 0 1rem;
-      line-height: 1.8;
-    }
-    .project-list li {
-      background: #e3e3e3;
-      margin: 0.5rem 0;
-      padding: 1rem;
-      border-radius: 4px;
-      transition: background 0.3s ease;
-    }
-    .project-list li:hover {
-      background: #d0d0d0;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+      transition: transform 0.5s ease, box-shadow 0.5s ease;
+      width: 300px;
+      height: 400px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      animation: fadeIn 1s ease forwards;
     }
 
-    /* Footer */
-    footer {
-      text-align: center;
-      padding: 2rem 1rem;
-      background: #2575fc;
-      color: #fff;
+    .card:hover {
+      transform: translateY(-10px) scale(1.05);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.7);
     }
 
-    /* Animations */
-    @keyframes fadeInDown {
-      from {
-        opacity: 0;
-        transform: translateY(-50px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+    .card h2 {
+      margin-bottom: 20px;
+      font-size: 24px;
+      color: #00eaff;
     }
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(50px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+
+    .card a {
+      margin-top: auto;
+      text-decoration: none;
+      padding: 10px 20px;
+      background: #00eaff;
+      color: #111;
+      border-radius: 10px;
+      font-weight: bold;
+      transition: background 0.3s;
     }
+
+    .card a:hover {
+      background: #00c2cc;
+    }
+
     @keyframes fadeIn {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    /* Responsive */
-    @media (min-width: 768px) {
-      header h1 {
-        font-size: 4rem;
-      }
-      header p {
-        font-size: 1.75rem;
-      }
-      nav ul {
-        gap: 2rem;
-      }
+      from {opacity: 0; transform: scale(0.8);}
+      to {opacity: 1; transform: scale(1);}
     }
   </style>
 </head>
+
 <body>
 
-  <!-- Navigation -->
-  <nav>
-    <div class="container">
-      <div class="logo">
-        <a href="#home"><strong>My Portfolio</strong></a>
+  <!-- Swiper -->
+  <div class="swiper">
+    <div class="swiper-wrapper">
+
+      <!-- Cards -->
+      <div class="swiper-slide">
+        <div class="card">
+          <h2>Shakthi Site</h2>
+          <a href="http://shakthi.pythonanywhere.com" target="_blank">Visit Site</a>
+        </div>
       </div>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About Me</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+
+      <div class="swiper-slide">
+        <div class="card">
+          <h2>ShakthiNandan7 Site</h2>
+          <a href="http://shakthinandan7.pythonanywhere.com" target="_blank">Visit Site</a>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="card">
+          <h2>SSS Nandan Site</h2>
+          <a href="http://sssnandan.pythonanywhere.com" target="_blank">Visit Site</a>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="card">
+          <h2>AI and DS Site</h2>
+          <a href="http://aiandds.pythonanywhere.com" target="_blank">Visit Site</a>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="card">
+          <h2>USIM Site</h2>
+          <a href="http://usim.pythonanywhere.com" target="_blank">Visit Site</a>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="card">
+          <h2>Treasure Hunt CIT</h2>
+          <a href="http://TreasureHuntCIT.pythonanywhere.com" target="_blank">Visit Site</a>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="card">
+          <h2>Covid Chatbot</h2>
+          <a href="https://covid-chatbot-cm6k.onrender.com" target="_blank">Visit Site</a>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="card">
+          <h2>VR FPV Drone</h2>
+          <a href="https://vr-fpv-drone-aframe.onrender.com/" target="_blank">Visit Site</a>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="card">
+          <h2>MedMe App</h2>
+          <a href="http://medme.onrender.com" target="_blank">Visit Site</a>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="card">
+          <h2>ShakthiNandan Render</h2>
+          <a href="https://shakthinandan.onrender.com/" target="_blank">Visit Site</a>
+        </div>
+      </div>
+
     </div>
-  </nav>
 
-  <!-- Header Section -->
-  <header id="home">
-    <h1>Welcome to My Portfolio</h1>
-    <p>B.Tech in AI & Data Science | AI, Cybersecurity, AR, IoT & More</p>
-  </header>
+    <!-- Pagination (optional) -->
+    <div class="swiper-pagination"></div>
 
-  <!-- About Me Section -->
-  <section id="about">
-    <h2>About Me</h2>
-    <div class="content">
-      <p>Hello! I am a tech and AI enthusiast with a deep passion for AI/ML, cybersecurity, embedded systems, and creative software development. With a B.Tech in AI & Data Science, I bridge technical expertise with user-friendly applications—ranging from IoT and AR projects to comprehensive data analysis and AI-driven innovations.</p>
-      <p>I love exploring new technologies and working on projects that push the boundaries, whether it's detecting malware, forecasting stock prices, or predicting seizures using advanced neural networks.</p>
-    </div>
-  </section>
+    <!-- Navigation Arrows (optional) -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
 
-  <!-- Projects Section -->
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="content">
-      <h3>AI & ML Initiatives</h3>
-      <ul class="project-list">
-        <li><strong>GPS Toll-Based Simulation (Intel Unnati Ignite):</strong> Real-time toll calculations and vehicle tracking using GPS data.</li>
-        <li><strong>On-Device Malware Detection (Samsung Prism):</strong> Android Java app integrated with TensorFlow for real-time malware detection.</li>
-        <li><strong>Paddy Disease Classification:</strong> Deep learning model with TensorFlow to identify 10 types of paddy diseases.</li>
-        <li><strong>APK Classification & Malware Analysis:</strong> AI model for feature extraction, labeling, training, and Java-based classification of malicious APK/ZIP files.</li>
-        <li><strong>Stock Price Forecasting:</strong> Time series analysis using LSTMs, GRUs, or Transformers for predicting market trends.</li>
-        <li><strong>Seizure Prediction:</strong> Using Transformers on EEG data for healthcare AI applications.</li>
-      </ul>
-      <h3>Software & Web Applications</h3>
-      <ul class="project-list">
-        <li><strong>USIM Clinical System:</strong> QR-based medical records management.</li>
-        <li><strong>Typing Test App:</strong> Flask-based speed tester with an interactive UI.</li>
-        <li><strong>AR-Based Home Decor Project:</strong> Vendors upload products and customers use AR to visualize items in their space.</li>
-        <li><strong>Student Attendance Tracker App:</strong> Developed with Flutter and Firebase.</li>
-        <li><strong>Java File Metadata Extractor:</strong> Tool for analyzing files to detect potential malware.</li>
-        <li><strong>Swifties Webpage:</strong> A multimedia fan page dedicated to Taylor Swift.</li>
-        <li><strong>Forum Website & MEDME:</strong> Full-stack projects with React, Flask, TypeScript, and PostgreSQL for project collaboration and hospital support software.</li>
-      </ul>
-      <h3>Game Development & 3D Modeling</h3>
-      <ul class="project-list">
-        <li><strong>Godot & Blender Projects:</strong> Creating interactive 3D models and VR-based medical visualizations.</li>
-        <li><strong>360-Degree VR Viewer:</strong> Using Pannellum and Three.js for immersive experiences.</li>
-      </ul>
-    </div>
-  </section>
+  <!-- Swiper.js JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-  <!-- Skills Section -->
-  <section id="skills">
-    <h2>Skills & Interests</h2>
-    <div class="content">
-      <p>I possess a wide range of technical skills including:</p>
-      <ul>
-        <li><strong>Programming Languages:</strong> Java, Python, JavaScript (TypeScript), Dart (Flutter)</li>
-        <li><strong>Frameworks & Libraries:</strong> TensorFlow, Keras, Flask, React, Node.js, Express.js, Three.js, Pannellum, Godot</li>
-        <li><strong>Data Science & Visualization:</strong> Power BI, Tableau, Python-based data analysis</li>
-        <li><strong>Embedded Systems & IoT:</strong> ESP8266, Android (5.1.1) for automation projects</li>
-        <li><strong>Cybersecurity & Big Data:</strong> Malware detection, feature extraction, and advanced classification models</li>
-      </ul>
-      <p>I'm also experienced in Flutter animations, web design, and big data solutions, and I have a keen eye for creating structured, user-friendly projects. I prefer organized Flask projects and have a critical approach to development practices.</p>
-    </div>
-  </section>
-
-  <!-- Experience & Involvement Section -->
-  <section id="experience">
-    <h2>Experience & Involvement</h2>
-    <div class="content">
-      <p>My journey encompasses both academic and hands-on experiences:</p>
-      <ul>
-        <li><strong>Education:</strong> B.Tech in AI & Data Science</li>
-        <li><strong>Hackathons & Competitions:</strong> Organizing GPTathon on Unstop and actively engaging in AI challenges</li>
-        <li><strong>Editorial Work:</strong> Editor of <em>PIXELS</em>, the department magazine (now in its 3rd edition)</li>
-        <li><strong>Technical Development:</strong> Projects spanning from real-time AI applications (malware detection, seizure prediction) to IoT innovations and AR experiences.</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <div class="content">
-      <p>If you'd like to collaborate or just say hello, feel free to drop me a message!</p>
-      <p>Email: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
-      <p>LinkedIn: <a href="#" target="_blank">My LinkedIn</a></p>
-      <p>GitHub: <a href="#" target="_blank">My GitHub</a></p>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 My Comprehensive Portfolio. All Rights Reserved.</p>
-  </footer>
-
-  <!-- Optional: Smooth scroll for older browsers -->
   <script>
-    document.querySelectorAll('nav a').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const targetID = this.getAttribute('href').substring(1);
-        const targetSection = document.getElementById(targetID);
-        if(targetSection) {
-          targetSection.scrollIntoView({ behavior: 'smooth' });
-        }
-      });
+    const swiper = new Swiper('.swiper', {
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      effect: 'coverflow',
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      coverflowEffect: {
+        rotate: 30,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
+      },
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
     });
   </script>
+
 </body>
 </html>
