@@ -1,18 +1,19 @@
 import requests
 
-# List of your hosted sites
 sites = [
+# List of your hosted sites
     "shakthi.pythonanywhere.com",
     "shakthinandan7.pythonanywhere.com",
     "sssnandan.pythonanywhere.com",
     "aiandds.pythonanywhere.com",
     "usim.pythonanywhere.com",
     "treasurehuntcit.pythonanywhere.com",
-    "covid-chatbot-cm6k.onrender.com",
     "vr-fpv-drone-aframe.onrender.com",
     "medme.onrender.com",
-    "shakthinandan.onrender.com"
-]
+    "shakthinandan.onrender.com",
+
+    "covid-chatbot-g11j.onrender.com",
+    ]
 
 for site in sites:
     url = f"https://{site}"
