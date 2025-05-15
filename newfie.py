@@ -13,7 +13,8 @@ sites = [
     "covid-chatbot-cm6k.onrender.com",
     "vr-fpv-drone-aframe.onrender.com",
     "medme.onrender.com",
-    "shakthinandan.onrender.com"
+    "shakthinandan.onrender.com",
+    "CITLibrary.pythonanywhere.com",
 ]
 
 # Create a folder for screenshots

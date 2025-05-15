@@ -13,7 +13,8 @@ sites = [
     "shakthinandan.onrender.com",
 
     "covid-chatbot-g11j.onrender.com",
-    ]
+    
+    "CITLibrary.pythonanywhere.com"]
 
 for site in sites:
     url = f"https://{site}"
